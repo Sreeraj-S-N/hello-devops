@@ -27,13 +27,6 @@ jobs:
       run: |
         docker push ${{ secrets.DOCKER_USERNAME }}/hello-devops:latest
 
-    - name: Setup Kubeconfig
-      run: |
-        mkdir -p $HOME/.kube
-        echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
+    
 
-    - name: Deploy to Kubernetes
-      run: |
-        kubectl apply -f deployment.yaml
-        kubectl apply -f service.yaml
-        kubectl rollout restart deployment hello-devops-deployment
+    
