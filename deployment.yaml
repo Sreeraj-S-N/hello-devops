@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: hello-devops-container
-        image: hello-devops:1.1
-        imagePullPolicy: Never
+        image: sreerajsree/hello-devops:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
         resources:
